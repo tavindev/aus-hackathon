@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "npx next dev",
-    "build": "npx build",
-    "start": "npx start",
+    "build": "npx next build",
+    "start": "npx next start",
     "prepare": "npx husky install",
     "commit": "npx git-cz"
   },
