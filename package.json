@@ -1,11 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "yarn next dev",
+    "build": "yarn next build",
+    "start": "yarn next start",
     "prepare": "npx husky install",
-    "commit": "git-cz"
+    "commit": "npx git-cz"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.1",
