@@ -1,4 +1,4 @@
-# AUS: Assistente Universal de Saúde
+# AUS: Assistente Universal de Saúde (development version)
 
 O AUS será um aplicativo na área de saúde integrado ao SUS...
 
