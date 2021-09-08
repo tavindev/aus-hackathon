@@ -33,10 +33,7 @@
 
 .card-grid {
   display: flex;
-  align-content: space-between;
-
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  /* margin: -12px; */
 }
 
 .card-text > p {
@@ -50,7 +47,7 @@
 .card-item {
   color: black;
   flex-grow: 0;
-  padding: 24px; /* 48px combined y*/
+  padding: 24px;
 
   max-width: 100%;
   flex-basis: 100%;
@@ -59,13 +56,6 @@
 .card-item-img div img {
   color: rgba(27, 78, 221, 1);
   fill: rgba(27, 78, 221, 1);
-}
-
-@media (min-width: 1280px) {
-  .card-item {
-    max-width: 50%;
-    flex-basis: 50%;
-  }
 }
 
 @media (min-width: 1536px) {
