@@ -1,5 +1,4 @@
-import 'tailwindcss/tailwind.css';
-import 'styles/globals.css';
+import 'styles/styles.css';
 
 import { useRouter } from 'next/dist/client/router';
 import { UserPageLayout } from 'containers/UserPageLayout';

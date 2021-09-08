@@ -2,6 +2,10 @@
 #2157DC
 #4E93DA
 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   font-family: 'Comfortaa', cursive;
 
@@ -97,10 +101,6 @@ main {
 
 .toolbar-link:hover::after {
   width: 100%;
-}
-
-.user-main-layout * {
-  color: black;
 }
 
 .user-layout {
