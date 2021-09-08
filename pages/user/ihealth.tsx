@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { WeightChart } from 'components/UserPage/WeightChart';
 import { GridItem } from 'components/UserPage/GridItem';
 import { AUSChart } from 'components/UserPage/AUSChart';
 import { MedicationList } from 'components/UserPage/MedicationList';
