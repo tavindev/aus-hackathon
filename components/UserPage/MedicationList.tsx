@@ -1,23 +1,15 @@
 import { Medication } from 'components/UserPage/Medication';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
+import { Medicines } from 'pages/api/user/medicines';
 import React, { useState } from 'react';
 
-const items = [
-  {
-    name: 'Paracetamol',
-    description: 'Dummy description',
-  },
-  {
-    name: 'Novalgina',
-    description: 'Tomar de 8 em 8 horas',
-  },
-  {
-    name: 'Soro',
-    description: 'Tomar de noite',
-  },
-];
+interface MedicationListProps {
+  medicines: Medicines;
+}
 
-export const MedicationList: React.FC = () => {
+export const MedicationList: React.FC<MedicationListProps> = ({
+  medicines,
+}) => {
   return (
     <div className="flex flex-col p-6 h-full overflow-hidden w-full">
       <div className="mb-4">
@@ -29,7 +21,7 @@ export const MedicationList: React.FC = () => {
             layout
             className="flex flex-col flex-wrap h-full overflow-hidden overflow-x-auto gap-2"
           >
-            {items.map(({ name, description }, i) => {
+            {medicines.medicines.map(({ name, description }, i) => {
               return (
                 <Medication key={i} name={name} description={description} />
               );

@@ -27,7 +27,11 @@ export const UserPageLayout: React.FC = ({ children }) => {
             label="Histórico Clínico"
             to="/user/records"
           />
-          <NavLink Icon={RiMentalHealthFill} label="Saúde Mental" to="/user" />
+          <NavLink
+            Icon={RiMentalHealthFill}
+            label="Saúde Mental"
+            to="/user/mhealth"
+          />
           <NavLink Icon={BiDevices} label="Dispositivos" to="/user/devices" />
         </nav>
       </aside>

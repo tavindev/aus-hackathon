@@ -1,34 +1,31 @@
 import { motion } from 'framer-motion';
+import { MetricObject, UserMetrics } from 'pages/api/user/metrics';
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
 interface ChartProps {
   color: string;
-  dataRange: number[];
-  numberOfSets: number;
+  dataset: MetricObject[];
   measurement: string;
   noTension?: boolean;
   offset?: number;
 }
 
-const random = (range: number[]) => {
-  return Math.floor(Math.random() * (range[1] - range[0] + 1)) + range[0];
-};
-
-const generateData = (range: number[], numberOfSets: number) => {
-  return Array.apply(null, Array(numberOfSets)).map((_, i) => random(range));
-};
-
 export const AUSChart: React.FC<ChartProps> = ({
   color,
-  dataRange,
-  numberOfSets,
+  dataset,
   measurement,
   noTension = false,
   offset = 0,
 }) => {
-  const min = dataRange[0] + offset;
-  const max = dataRange[1] + offset;
+  // May cause performance issues when used with big datasets
+  const orderedDataset = Array.from(dataset.values()).sort(
+    (a, b) => a.value - b.value
+  );
+  const orderedDatasetLen = orderedDataset.length;
+
+  const min = orderedDataset[0].value;
+  const max = orderedDataset[orderedDatasetLen - 1].value + offset;
 
   const options = {
     responsive: true,
@@ -37,7 +34,7 @@ export const AUSChart: React.FC<ChartProps> = ({
       x: { display: false },
       y: {
         min: 0,
-        max: max + 50,
+        max: max + max / 2,
         display: false,
       },
     },
@@ -47,9 +44,12 @@ export const AUSChart: React.FC<ChartProps> = ({
       },
       tooltip: { display: false },
     },
+    elements: {
+      point: {
+        radius: 0,
+      },
+    },
   };
-
-  const _data = generateData([min, max], numberOfSets);
 
   const getChartData = (canvas) => {
     const ctx = canvas.getContext('2d');
@@ -59,10 +59,10 @@ export const AUSChart: React.FC<ChartProps> = ({
     gradient.addColorStop(0.95, `${color}00`);
 
     const data = {
-      labels: Array.apply(null, Array(numberOfSets)).map((_, i) => i),
+      labels: dataset.map((a) => a.id),
       datasets: [
         {
-          data: _data,
+          data: dataset.map((a) => a.value + offset),
           label: '',
           borderColor: color,
           backgroundColor: gradient,
@@ -86,7 +86,7 @@ export const AUSChart: React.FC<ChartProps> = ({
           className="text-lg font-bold text-white"
           style={{ color: 'white !important' }}
         >
-          {_data[dataRange.length - 1] - offset + ' ' + measurement}
+          {dataset[dataset.length - 1].value + ' ' + measurement}
         </p>
       </motion.div>
     </div>

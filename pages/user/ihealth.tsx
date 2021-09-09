@@ -4,9 +4,48 @@ import { GridItem } from 'components/UserPage/GridItem';
 import { AUSChart } from 'components/UserPage/AUSChart';
 import { MedicationList } from 'components/UserPage/MedicationList';
 import { Nutrition } from 'components/UserPage/Nutrition';
+import { UserMetrics } from 'pages/api/user/metrics';
 import { PreventiveMedicine } from 'components/UserPage/PreventiveMedicine';
+import useSWR from 'swr';
+import { motion } from 'framer-motion';
+import { Loader } from 'components/Loader';
+import { UserProfile } from 'pages/api/user';
+import { GiMedicines } from 'react-icons/gi';
+import { Medicines } from 'pages/api/user/medicines';
+
+const fetchMetrics = async () => {
+  const response = await fetch('/api/user/metrics');
+
+  return await response.json();
+};
+
+const fetchProfile = async () => {
+  const response = await fetch('/api/user');
+
+  return await response.json();
+};
+
+const fetchMedicines = async () => {
+  const response = await fetch('/api/user/medicines');
+
+  return await response.json();
+};
 
 const IHealth: React.FC = () => {
+  const { data: metrics } = useSWR<UserMetrics>(
+    '/api/user/metrics',
+    fetchMetrics
+  );
+
+  const { data: profile } = useSWR<UserProfile>('/api/user', fetchProfile);
+
+  const { data: medicines } = useSWR<Medicines>(
+    '/api/user/medicines',
+    fetchMedicines
+  );
+
+  if (!metrics || !profile || !medicines) return <Loader />;
+
   return (
     <>
       <Head>
@@ -25,9 +64,8 @@ const IHealth: React.FC = () => {
                 </div>
                 <div className="chart-container flex flex-grow justify-center mt-4 relative overflow-hidden">
                   <AUSChart
-                    numberOfSets={10}
+                    dataset={metrics.weight}
                     color="#fa5f5f"
-                    dataRange={[60, 69]}
                     measurement="kg"
                   />
                 </div>
@@ -40,9 +78,8 @@ const IHealth: React.FC = () => {
                 </div>
                 <div className="chart-container flex flex-grow justify-center mt-4 relative overflow-hidden">
                   <AUSChart
-                    numberOfSets={20}
+                    dataset={metrics.bpm}
                     color="#a073f5"
-                    dataRange={[100, 180]}
                     measurement="bpm"
                     noTension
                   />
@@ -56,9 +93,8 @@ const IHealth: React.FC = () => {
                 </div>
                 <div className="chart-container flex flex-grow justify-center mt-4 relative overflow-hidden">
                   <AUSChart
-                    numberOfSets={10}
+                    dataset={metrics.exercices}
                     color="#58aad6"
-                    dataRange={[1, 4]}
                     measurement="hora(s)"
                     offset={50}
                   />
@@ -72,10 +108,9 @@ const IHealth: React.FC = () => {
                 </div>
                 <div className="chart-container flex flex-grow justify-center mt-4 relative overflow-hidden">
                   <AUSChart
-                    numberOfSets={10}
+                    dataset={metrics.sleep}
                     color="#78e072"
-                    dataRange={[6, 9]}
-                    measurement="hours"
+                    measurement="hora(s)"
                     offset={100}
                   />
                 </div>
@@ -85,20 +120,29 @@ const IHealth: React.FC = () => {
               <div className="flex justify-between p-8 box-border h-80 w-full">
                 <div className="flex flex-col flex-wrap">
                   <div className="mb-4">
-                    <p className="text-sm font-bold">Nome: Fulano da Silva</p>
-                    <p className="text-sm">Idade: 17 anos</p>
-                    <p className="text-sm">Sexo: Masculino</p>
+                    <p className="text-sm font-bold">Nome: {profile.name}</p>
+                    <p className="text-sm">Idade: {profile.age} anos</p>
+                    <p className="text-sm">Sexo: {profile.sex}</p>
                   </div>
                   <div className="mb-4">
-                    <p className="text-sm font-bold">Altura Atual: 1,72m</p>
-                    <p className="text-sm">Peso Atual: 61.80kg</p>
-                    <p className="text-sm">Gordura Corporal Atual: 13,4%</p>
+                    <p className="text-sm font-bold">
+                      Altura Atual: {profile.age.toString().replace('.', ',')}m
+                    </p>
+                    <p className="text-sm">
+                      Peso Atual:{' '}
+                      {metrics.weight[metrics.weight.length - 1].value}kg
+                    </p>
+                    <p className="text-sm">
+                      Gordura Corporal Atual:{' '}
+                      {(profile.currentBodyFat * 100)
+                        .toString()
+                        .replace('.', ',')}
+                      %
+                    </p>
                   </div>
                   <div>
-                    <p className="text-sm">
-                      Endereço: Rua Senador Vergueiro, Flamengo
-                    </p>
-                    <p className="text-sm">CEP: 22230-001</p>
+                    <p className="text-sm">Endereço: {profile.address}</p>
+                    <p className="text-sm">CEP: {profile.cep}</p>
                   </div>
                 </div>
                 <div>
@@ -110,10 +154,10 @@ const IHealth: React.FC = () => {
               <PreventiveMedicine />
             </GridItem>
             <GridItem className="row-span-2 col-span-2">
-              <MedicationList />
+              <MedicationList medicines={medicines} />
             </GridItem>
             <GridItem className="row-span-2 col-span-2">
-              <Nutrition />
+              <Nutrition diet={metrics.diet} />
             </GridItem>
           </div>
         </div>

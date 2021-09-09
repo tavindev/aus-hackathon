@@ -2,10 +2,21 @@ import React from 'react';
 import Head from 'next/head';
 import { GridItem } from 'components/UserPage/GridItem';
 import { ExamCard } from 'components/UserPage/ExamCard';
+import useSWR from 'swr';
+import { Exams } from 'pages/api/user/exams';
+import { Loader } from 'components/Loader';
 
-// import { Container } from './styles';
+const fetchExams = async () => {
+  const response = await fetch('/api/user/exams');
+
+  return await response.json();
+};
 
 const Records: React.FC = () => {
+  const { data: exams } = useSWR<Exams>('/api/user/exams', fetchExams);
+
+  if (!exams) return <Loader />;
+
   return (
     <>
       <Head>
@@ -23,11 +34,17 @@ const Records: React.FC = () => {
                   <h2 className="text-xl font-bold">Seus Exames</h2>
                 </div>
                 <div className="max-h-full mt-4 pt-2 px-6">
-                  <ExamCard label="Exame de Sangue" date="20 Set 2045" />
-                  <ExamCard label="Exame de Sangue" date="20 Set 2045" />
-                  <ExamCard label="Exame de Sangue" date="20 Set 2045" />
-                  <ExamCard label="Exame de Sangue" date="20 Set 2045" />
-                  <ExamCard label="Exame de Sangue" date="20 Set 2045" />
+                  {exams.exams.map(({ label, date, status }, i) => {
+                    return (
+                      <ExamCard
+                        key={i}
+                        i={i}
+                        label={label}
+                        date={date}
+                        status={status}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </GridItem>
