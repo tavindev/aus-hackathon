@@ -46,6 +46,10 @@ main {
   min-height: 40vh;
 }
 
+.cards-section-grid {
+  min-height: 40vh;
+}
+
 .card-item {
   color: black;
 }
