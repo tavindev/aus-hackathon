@@ -18,7 +18,7 @@ export const Medication: React.FC<MedicationProps> = ({
     <motion.div
       layout="position"
       onClick={toggleOpen}
-      className="w-1/2 2xl:w-1/3 bg-gray-100 overflow-hidden rounded cursor-pointer p-3 box-border"
+      className="w-1/2 bg-gray-100 overflow-hidden rounded cursor-pointer p-3 box-border"
     >
       <motion.div className="flex items-center justify-between h-8">
         <p className="text-sm font-bold">{name}</p>
