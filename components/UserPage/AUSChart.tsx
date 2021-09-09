@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
@@ -76,8 +77,9 @@ export const AUSChart: React.FC<ChartProps> = ({
   return (
     <div className="absolute">
       <Line data={getChartData} options={options} height={350} width={500} />
-      <div
-        className="flex items-center justify-center absolute bottom-8 2xl:bottom-12 right-1/3 h-11 w-1/3 rounded-md"
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        className="flex items-center justify-center absolute bottom-10 2xl:bottom-12 right-1/3 h-11 w-1/3 rounded-md"
         style={{ background: color }}
       >
         <p
@@ -86,7 +88,7 @@ export const AUSChart: React.FC<ChartProps> = ({
         >
           {_data[dataRange.length - 1] - offset + ' ' + measurement}
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
