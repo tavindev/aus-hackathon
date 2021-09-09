@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </section>
         <section className="container flex items-center cards-section w-full box-border">
-          <div className="grid grid-rows-3 grid-cols-2 2xl:grid-rows-2 2xl:grid-cols-3 gap-12 justify-center items-center w-full h-full box-border py-10 2xl:py-5">
+          <div className="grid grid-rows-3 grid-cols-2 2xl:grid-rows-2 2xl:grid-cols-3 gap-5 justify-center items-center w-full h-full box-border py-10 2xl:py-5">
             <MiniCard
               title="Doutor Virtual"
               description="Está se sentindo mal? Faça uma breve consulta com o nosso doutor virtual"
@@ -53,22 +53,22 @@ export default function Home() {
             <MiniCard
               title="Integração com dispositivos inteligentes"
               description="Conecte seus dispositivos inteligentes e obtenha todas as informações disponíveis em tempo real"
-              img="/data_icon.svg"
+              img="/smart_devices.svg"
             />
             <MiniCard
               title="Saúde Mental"
-              description="Está passando por uma crise psiquiátrica? Acesse nossa plataforma de conteúdos para se informar e acione nossa rede de profissionais para buscar apoio"
-              img="/data_icon.svg"
+              description="Acione nossa rede de profissionais para buscar apoio"
+              img="/mental_health.svg"
             />
             <MiniCard
               title="Medicina Preventiva"
               description="Informe-se sobre hábitos para previnir doenças às quais você seja predisposto"
-              img="/data_icon.svg"
+              img="/preventive_medicine.svg"
             />
             <MiniCard
               title="Saúde Interativa"
-              description="Atualize em tempo real e monitore dados de saúde como sua rotina de exercícios, sua dieta e habitos nutricionais, seu ciclo de sono e seu cronograma de medicamentos"
-              img="/data_icon.svg"
+              description="Atualize em tempo real e monitore seus dados de saúde"
+              img="/interactive_medicine.svg"
             />
           </div>
         </section>
