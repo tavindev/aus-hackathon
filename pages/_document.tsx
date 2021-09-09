@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <df-messenger
             intent="WELCOME"
             chat-title="DoutorVirtual"
-            agent-id="48fde575-b070-448e-93da-2519a924505f"
+            agent-id="e2f785fc-9c78-468d-b107-c91cb88d4178"
             language-code="pt-br"
           >
             {/** @ts-ignore */}
