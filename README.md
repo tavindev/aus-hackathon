@@ -6,6 +6,15 @@ O Assistente Universal de Saúde é um aplicativo do governo que integrará os d
 
 ## Tecnologias
 
+<div align="center">
+  <img style="width: 200px; height: 200px" src="https://raw.githubusercontent.com/igniteram/Cliptor.js/HEAD/images/typescript.png" />
+  <img style="width: 200px; height: 200px" src="https://ih1.redbubble.net/image.983299034.4034/st,small,507x507-pad,600x600,f8f8f8.jpg" />
+  <img style="width: 200px; height: 200px" src="https://i0.wp.com/www.primefaces.org/wp-content/uploads/2017/09/feature-react.png?fit=260%2C260&ssl=1" />
+  <img style="width: 200px; height: 200px" src="https://tailwindcss.com/_next/static/media/twitter-square.daf77586b35e90319725e742f6e069f9.jpg" />
+  <img style="width: 200px; height: 200px" src="https://yt3.ggpht.com/ytc/AKedOLTX3dhhAIjZNGlLK_k89UC4nVd7rJj0VOAw7Fd0yQ=s900-c-k-c0x00ffffff-no-rj" />
+</div>
+  
+
 Com o objetivo de criar uma aplicação de ponta e altamente escalável, o aplicativo do AUS utiliza as seguintes técnologias:
 - [Typescript](https://www.typescriptlang.org/)
   - O Typescript é um "Superset" do Javascript (ou como dizem: Javascript em esteróides). Com ele, podemos criar aplicações altamente tipaveis e robustas, melhorando, assim, a experiência de desenvolvimento e a manutenção do código 
@@ -15,13 +24,15 @@ Com o objetivo de criar uma aplicação de ponta e altamente escalável, o aplic
   - O ReactJs é um framework de desenvolvimento web que nos permite criar aplicações performáticas e de forma declarativa.
 - [TailwindCSS](https://tailwindcss.com/)
   - O TailwindCSS é um framework de classes de utilidade CSS. Com ele, podemos estilizar nossa aplicação de forma simples, porém altamente customizavel. 
+- [DialogFlow](https://dialogflow.cloud.google.com)
+  - O DialogFlow é uma plataforma de NLP (Natural Language Processing) que nos viabiliza a comunicação entre humano e máquina. O AUS utiliza essa ferramenta para o Atendimento Médico Virtual.
 
 ### Caveats da versão demo
 
-1 - A nossa versão demo não utiliza nenhum tipo de armazenamento de dados (bancos de dados) por questões demonstrativas. No entanto, é possível implementar de forma simples e eficiente a utilização desse tipo de serviço, devido à alta maleabilidade e escalabilidade da nossa aplicação
+1 - A nossa versão demo não utiliza nenhum tipo de armazenamento de dados (bancos de dados), por questões demonstrativas. No entanto, é possível implementar de forma simples e eficiente a utilização desse tipo de serviço, devido à alta maleabilidade e escalabilidade da nossa aplicação
 
 Algumas possíveis soluções para a implementação de um banco de dados:
-- [Prisma](https://www.prisma.io/) (TypeORM para SQL e NoSQL)
+- [Prisma.io](https://www.prisma.io/) (TypeORM para SQL e NoSQL)
 - [MongoDB](https://www.mongodb.com/) (Solução Cloud com bibliotecas em JS)
 
 2 - Por questões de tempo, não desenvolvemos nossa aplicação com a metodologia de "mobile-first". Porém futuras atualizações tornarão o aplicativo AUS "mobile friendly"
