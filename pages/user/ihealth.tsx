@@ -4,6 +4,7 @@ import { GridItem } from 'components/UserPage/GridItem';
 import { AUSChart } from 'components/UserPage/AUSChart';
 import { MedicationList } from 'components/UserPage/MedicationList';
 import { Nutrition } from 'components/UserPage/Nutrition';
+import { PreventiveMedicine } from 'components/UserPage/PreventiveMedicine';
 
 const IHealth: React.FC = () => {
   return (
@@ -11,12 +12,12 @@ const IHealth: React.FC = () => {
       <Head>
         <title>AUS - Saúde Interativa</title>
       </Head>
-      <div className="flex flex-col px-10 pt-10 min-h-full">
+      <div className="flex flex-col p-10 min-h-full">
         <div className="h-auto">
           <h1 className="text-2xl">Saúde Interativa</h1>
         </div>
         <div className="grid-container mt-12 h-full">
-          <div className="grid grid-rows-2 grid-cols-4 2xl:grid-rows-6 2xl:grid-cols-6 gap-4 w-full h-full pb-6">
+          <div className="grid grid-rows-6 grid-cols-4 2xl:grid-rows-6 2xl:grid-cols-6 gap-4 w-full h-full pb-6">
             <GridItem className="row-span-2 col-span-1">
               <div className="flex flex-col h-full w-full">
                 <div className="pl-4 pt-4 h-12 overflow-hidden">
@@ -105,13 +106,8 @@ const IHealth: React.FC = () => {
                 </div>
               </div>
             </GridItem>
-            <GridItem className="col-span-4 row-span-4">
-              {/** h4 w4 */}
-              <div className="flex flex-col h-full w-full">
-                <div className="pl-4 pt-4 h-12 overflow-hidden">
-                  <h2 className="text-xl font-bold">Medicina Preventiva</h2>
-                </div>
-              </div>
+            <GridItem className="hidden 2xl:block col-span-4 row-span-4">
+              <PreventiveMedicine />
             </GridItem>
             <GridItem className="row-span-2 col-span-2">
               <MedicationList />
@@ -120,6 +116,9 @@ const IHealth: React.FC = () => {
               <Nutrition />
             </GridItem>
           </div>
+        </div>
+        <div className="block 2xl:hidden bg-white rounded-xl w-full shadow">
+          <PreventiveMedicine />
         </div>
       </div>
     </>
