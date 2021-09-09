@@ -17,7 +17,7 @@ const IHealth: React.FC = () => {
         </div>
         <div className="grid-container mt-12 h-full">
           <div className="grid grid-rows-6 grid-cols-6 gap-4 w-full min-h-full pb-6">
-            <GridItem height={2}>
+            <GridItem>
               <div className="flex flex-col h-full w-full">
                 <div className="pl-4 pt-4 h-12 overflow-hidden">
                   <h2 className="text-xl font-bold">Peso</h2>
@@ -32,7 +32,7 @@ const IHealth: React.FC = () => {
                 </div>
               </div>
             </GridItem>
-            <GridItem height={2}>
+            <GridItem>
               <div className="flex flex-col h-full w-full">
                 <div className="pl-4 pt-4 h-12 overflow-hidden">
                   <h2 className="text-xl font-bold">BPM</h2>
@@ -48,7 +48,7 @@ const IHealth: React.FC = () => {
                 </div>
               </div>
             </GridItem>
-            <GridItem height={2}>
+            <GridItem>
               <div className="flex flex-col h-full w-full">
                 <div className="pl-4 pt-4 h-12 overflow-hidden">
                   <h2 className="text-xl font-bold">Exercícios</h2>
@@ -64,7 +64,7 @@ const IHealth: React.FC = () => {
                 </div>
               </div>
             </GridItem>
-            <GridItem height={2}>
+            <GridItem>
               <div className="flex flex-col h-full w-full">
                 <div className="pl-4 pt-4 h-12 overflow-hidden">
                   <h2 className="text-xl font-bold">Sono</h2>
@@ -80,7 +80,7 @@ const IHealth: React.FC = () => {
                 </div>
               </div>
             </GridItem>
-            <GridItem height={2} width={2}>
+            <GridItem width={2}>
               <div className="flex justify-between p-8 box-border h-80 w-full">
                 <div className="flex flex-col flex-wrap">
                   <div className="mb-4">
@@ -106,10 +106,10 @@ const IHealth: React.FC = () => {
               </div>
             </GridItem>
             <GridItem height={4} width={4} />
-            <GridItem height={2} width={2}>
+            <GridItem width={2}>
               <MedicationList />
             </GridItem>
-            <GridItem height={2} width={2}>
+            <GridItem width={2}>
               <Nutrition />
             </GridItem>
           </div>

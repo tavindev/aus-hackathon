@@ -25,10 +25,10 @@ export const UserPageLayout: React.FC = ({ children }) => {
           <NavLink
             Icon={HiDocumentReport}
             label="Histórico Clínico"
-            to="/user"
+            to="/user/records"
           />
           <NavLink Icon={RiMentalHealthFill} label="Saúde Mental" to="/user" />
-          <NavLink Icon={BiDevices} label="Dispositivos" to="/user" />
+          <NavLink Icon={BiDevices} label="Dispositivos" to="/user/devices" />
         </nav>
       </aside>
       <div className="user-main-layout flex-grow bg-gray-50">{children}</div>
