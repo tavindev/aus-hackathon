@@ -2,7 +2,7 @@ import { NutritionChart } from 'components/UserPage/NutritionChart';
 
 export const Nutrition: React.FC = () => {
   return (
-    <div className="p-8 h-full overflow-y-scroll w-full">
+    <div className="p-8 h-full overflow-hidden overflow-y-auto w-full">
       <div>
         <h2 className="text-lg font-bold">Dieta</h2>
       </div>

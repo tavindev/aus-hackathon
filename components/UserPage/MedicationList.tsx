@@ -27,7 +27,7 @@ export const MedicationList: React.FC = () => {
         <AnimateSharedLayout>
           <motion.div
             layout
-            className="flex flex-col flex-wrap h-full overflow-y-hidden overflow-x-scroll gap-2"
+            className="flex flex-col flex-wrap h-full overflow-hidden overflow-x-auto gap-2"
           >
             {items.map(({ name, description }, i) => {
               return (
