@@ -6,6 +6,7 @@ export const PreventiveMedicine: React.FC = () => {
       <div className="pl-4 pt-4 h-12 overflow-hidden">
         <h2 className="text-xl font-bold">Medicina Preventiva</h2>
       </div>
+      <div className="mt-4 w-full"></div>
     </div>
   );
 };

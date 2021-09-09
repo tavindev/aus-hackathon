@@ -5,13 +5,19 @@ import { GiHealthNormal } from 'react-icons/gi';
 import { RiMentalHealthFill } from 'react-icons/ri';
 import { BiDevices } from 'react-icons/bi';
 import { HiDocumentReport } from 'react-icons/hi';
+import { useRouter } from 'next/router';
 
 export const UserPageLayout: React.FC = ({ children }) => {
+  const router = useRouter();
+
   return (
     <div className="user-layout flex h-screen">
       <aside className="flex flex-col items-center w-60">
         <div className="flex justify-center items-center w-full h-24 border-b border-gray-200">
-          <div className="relative w-20 h-9">
+          <div
+            className="relative w-20 h-9 cursor-pointer"
+            onClick={() => router.push('/')}
+          >
             <Image src="/aus_blue.svg" layout="fill" />
           </div>
         </div>
