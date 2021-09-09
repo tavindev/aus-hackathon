@@ -77,7 +77,7 @@ export const AUSChart: React.FC<ChartProps> = ({
     <div className="absolute">
       <Line data={getChartData} options={options} height={350} width={500} />
       <div
-        className="flex items-center justify-center absolute bottom-8 right-1/3 h-11 w-1/3 rounded-md"
+        className="flex items-center justify-center absolute bottom-8 2xl:bottom-12 right-1/3 h-11 w-1/3 rounded-md"
         style={{ background: color }}
       >
         <p

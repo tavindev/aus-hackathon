@@ -16,7 +16,7 @@ const Records: React.FC = () => {
           <h1 className="text-2xl">Histórico Clínico</h1>
         </div>
         <div className="grid-container mt-12 h-full">
-          <div className="grid grid-rows-4 grid-cols-5 gap-4 w-full min-h-full pb-6">
+          <div className="grid grid-cols-2 2xl:grid-rows-2 2xl:grid-cols-4 gap-4 w-full h-full pb-6">
             <GridItem>
               <div className="flex flex-col h-full w-full">
                 <div className="pl-4 pt-4 h-12 overflow-hidden">
@@ -53,10 +53,10 @@ const Records: React.FC = () => {
               </div>
             </GridItem>
             <GridItem></GridItem>
-            <GridItem width={2} height={4}></GridItem>
             <GridItem></GridItem>
             <GridItem></GridItem>
             <GridItem></GridItem>
+            <GridItem className="row-span-2 col-span-2"></GridItem>
           </div>
         </div>
       </div>

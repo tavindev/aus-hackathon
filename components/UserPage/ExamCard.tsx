@@ -14,7 +14,7 @@ export const ExamCard: React.FC<ExamCardProps> = ({ date, label }) => {
           <p className="text-xs">{date}</p>
         </div>
       </div>
-      <div className="flex items-center rounded h-8 bg-green-600 p-2">
+      <div className="flex items-center rounded h-8 bg-green-600 p-1">
         <p>Entregue</p>
       </div>
     </div>

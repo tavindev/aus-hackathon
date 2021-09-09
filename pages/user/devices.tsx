@@ -20,7 +20,7 @@ const Devices: React.FC = () => {
           <DeviceCard label="SmartWatch" Icon={BsWatch} />
           <DeviceCard label="FitBit" Icon={SiFitbit} />
           <DeviceCard label="NeuroLink" Icon={FaBrain} />
-          <div className="flex flex-col w-56 h-56 bg-white rounded-lg border-4 border-blue-700">
+          <div className="flex flex-col w-56 h-56 bg-white rounded-lg border-4 cursor-pointer border-blue-700">
             <div className="flex justify-center items-center w-full h-full">
               <AiOutlinePlus color="rgba(29, 78, 216)" size={96} />
             </div>
