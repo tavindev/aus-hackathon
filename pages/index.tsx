@@ -39,7 +39,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="container flex items-center cards-section w-full box-border">
+        <section className="container cards-section w-full box-border">
           <div className="grid grid-rows-3 grid-cols-2 2xl:grid-rows-2 2xl:grid-cols-3 gap-5 justify-center items-center w-full h-full box-border py-10 2xl:py-5">
             <MiniCard
               title="Doutor Virtual"
