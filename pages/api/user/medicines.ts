@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export type Medicine = { name: string; description: string };
+export type Medicine = { name: string; description: string; next: string };
 
 export interface Medicines {
   medicines: Medicine[];
@@ -11,7 +11,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     medicines: [
       {
         name: 'Paracetamol',
-        description: 'Dummy Description',
+        description: 'Remédio para X (de 8 em 8 horas)',
+        next: '15:30',
       },
     ],
   };
