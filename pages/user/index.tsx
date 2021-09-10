@@ -89,8 +89,8 @@ const User: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-rows-2 grid-cols-2 2xl:grid-rows-1 gap-2 mt-8 h-auto">
-          <div className="calendar row-span-1 col-span-2 2xl:col-span-1 w-full h-full shadow rounded max-h-96">
+        <div className="grid grid-rows-4 2xl:grid-rows-3 grid-cols-4 gap-2 mt-8 h-auto">
+          <div className="calendar row-span-1 col-span-4 w-full h-full shadow rounded max-h-96">
             <div className="flex bg-white h-full min-h-full max-h-full">
               <Calendar locale="pt-BR" />
               <div className="flex-grow py-4 h-full min-h-full max-h-full overflow-hidden overflow-y-auto">
@@ -110,7 +110,7 @@ const User: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="notifications row-span-1 col-span-2 2xl:col-span-1 flex flex-col p-8 w-full max-h-96 shadow rounded bg-white">
+          <div className="notifications row-span-1 col-span-4 2xl:col-span-2 flex flex-col p-8 w-full max-h-96 shadow rounded bg-white">
             <h3 className="text-lg">Notificações</h3>
             <div className="flex flex-grow flex-col justify-between items-center w-full">
               <div className="relative h-56 w-full">
@@ -119,11 +119,11 @@ const User: React.FC = () => {
               <p className="mt-4">Tudo quieto por aqui...</p>
             </div>
           </div>
-        </div>
-        <div className="flex h-96 mt-4">
-          <div className="bg-white rounded shadow w-1/2 2xl:w-1/3 h-full overflow-hidden overflow-y-auto">
+          <div className="medications row-span-1 col-span-2 bg-white rounded shadow h-full overflow-hidden overflow-y-auto">
             <MedicationList medicines={medicines} />
           </div>
+          <div className="services row-span-1 col-span-2 bg-white rounded shadow"></div>
+          <div className="medical-record row-span-1 col-span-4 2xl:col-span-2 bg-white rounded shadow"></div>
         </div>
       </div>
     </>

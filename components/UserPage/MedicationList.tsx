@@ -19,7 +19,7 @@ export const MedicationList: React.FC<MedicationListProps> = ({
         <AnimateSharedLayout>
           <motion.div
             layout
-            className="flex flex-col flex-wrap h-full overflow-hidden overflow-x-auto gap-2"
+            className="flex flex-col flex-wrap h-full overflow-hidden overflow-y-auto gap-2"
           >
             {medicines.medicines.map(({ name, description, next }, i) => {
               return (

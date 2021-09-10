@@ -11,7 +11,7 @@ export const Medication: React.FC<Medicine> = ({ name, description, next }) => {
     <motion.div
       layout
       onClick={toggleOpen}
-      className="w-1/2 bg-gray-100 overflow-hidden rounded cursor-pointer p-3 box-border"
+      className="w-full bg-gray-100 overflow-hidden rounded cursor-pointer p-3 box-border"
     >
       <motion.div
         className="flex items-center justify-between h-8"
