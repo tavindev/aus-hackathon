@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { GridItem } from 'components/UserPage/GridItem';
 import { ExamCard } from 'components/UserPage/ExamCard';
 import useSWR from 'swr';
-import { Exams } from 'pages/api/user/exams';
+import { ExamsResponse } from 'pages/api/user/exams';
 import { Loader } from 'components/Loader';
 
 const fetchExams = async () => {
@@ -13,7 +13,7 @@ const fetchExams = async () => {
 };
 
 const Records: React.FC = () => {
-  const { data: exams } = useSWR<Exams>('/api/user/exams', fetchExams);
+  const { data: exams } = useSWR<ExamsResponse>('/api/user/exams', fetchExams);
 
   if (!exams) return <Loader />;
 

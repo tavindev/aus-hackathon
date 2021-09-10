@@ -17,7 +17,7 @@ export const ExamCard: React.FC<ExamCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex justify-between items-center mb-4 ${
+      className={`flex justify-between items-center mb-4 p-2 ${
         i % 2 === 0 && 'bg-gray-50'
       }`}
     >

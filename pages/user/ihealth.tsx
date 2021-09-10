@@ -12,21 +12,12 @@ import { Loader } from 'components/Loader';
 import { UserProfile } from 'pages/api/user';
 import { GiMedicines } from 'react-icons/gi';
 import { Medicines } from 'pages/api/user/medicines';
+import { ProfilePicture } from 'components/UserPage/ProfilePicture';
+import { fetchProfile } from 'utils/fetchProfile';
+import { fetchMedicines } from 'utils/fetchMedicines';
 
 const fetchMetrics = async () => {
   const response = await fetch('/api/user/metrics');
-
-  return await response.json();
-};
-
-const fetchProfile = async () => {
-  const response = await fetch('/api/user');
-
-  return await response.json();
-};
-
-const fetchMedicines = async () => {
-  const response = await fetch('/api/user/medicines');
 
   return await response.json();
 };
@@ -119,20 +110,20 @@ const IHealth: React.FC = () => {
             <GridItem className="row-span-2 col-span-4 2xl:col-span-2">
               <div className="flex justify-between p-8 box-border h-80 w-full">
                 <div className="flex flex-col flex-wrap">
-                  <div className="mb-4">
+                  <div className="mb-4 text-sm">
                     <p className="text-sm font-bold">Nome: {profile.name}</p>
                     <p className="text-sm">Idade: {profile.age} anos</p>
                     <p className="text-sm">Sexo: {profile.sex}</p>
                   </div>
-                  <div className="mb-4">
-                    <p className="text-sm font-bold">
+                  <div className="mb-4 text-sm">
+                    <p className=" font-bold">
                       Altura Atual: {profile.age.toString().replace('.', ',')}m
                     </p>
-                    <p className="text-sm">
+                    <p>
                       Peso Atual:{' '}
                       {metrics.weight[metrics.weight.length - 1].value}kg
                     </p>
-                    <p className="text-sm">
+                    <p>
                       Gordura Corporal Atual:{' '}
                       {(profile.currentBodyFat * 100)
                         .toString()
@@ -140,13 +131,12 @@ const IHealth: React.FC = () => {
                       %
                     </p>
                   </div>
-                  <div>
-                    <p className="text-sm">Endereço: {profile.address}</p>
-                    <p className="text-sm">CEP: {profile.cep}</p>
+                  <div className="text-sm">
+                    <p>Tipo Sanguíneo: {profile.bloodType}</p>
                   </div>
                 </div>
                 <div>
-                  <div className="bg-red-600 rounded-full w-28 aspect-w-1 aspect-h-1"></div>
+                  <ProfilePicture />
                 </div>
               </div>
             </GridItem>

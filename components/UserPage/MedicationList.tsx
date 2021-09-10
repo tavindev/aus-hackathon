@@ -21,9 +21,14 @@ export const MedicationList: React.FC<MedicationListProps> = ({
             layout
             className="flex flex-col flex-wrap h-full overflow-hidden overflow-x-auto gap-2"
           >
-            {medicines.medicines.map(({ name, description }, i) => {
+            {medicines.medicines.map(({ name, description, next }, i) => {
               return (
-                <Medication key={i} name={name} description={description} />
+                <Medication
+                  key={i}
+                  name={name}
+                  description={description}
+                  next={next}
+                />
               );
             })}
           </motion.div>
