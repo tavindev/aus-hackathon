@@ -16,6 +16,8 @@ import { EventsResposne } from 'pages/api/user/events';
 import { MedicationList } from 'components/UserPage/MedicationList';
 import { Medicines } from 'pages/api/user/medicines';
 import { fetchMedicines } from 'utils/fetchMedicines';
+import { ExamsResponse } from 'pages/api/user/exams';
+import { fetchExams } from 'utils/fetchExams';
 
 const fetchEvents = async () => {
   const response = await fetch('/api/user/events');
@@ -24,6 +26,8 @@ const fetchEvents = async () => {
 
 const User: React.FC = () => {
   const { data: profile } = useSWR<UserProfile>('/api/user', fetchProfile);
+
+  const { data: exams } = useSWR<ExamsResponse>('/api/user/exams', fetchExams);
 
   const { data: events } = useSWR<EventsResposne>(
     '/api/user/events',
@@ -89,8 +93,8 @@ const User: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-rows-3 grid-cols-4 gap-2 mt-8 h-auto select-none">
-          <div className="calendar row-span-1 col-span-4 w-full shadow rounded h-80">
+        <div className="grid grid-rows-3 grid-cols-4 gap-2 mt-8 h-auto">
+          <div className="calendar row-span-1 col-span-4 w-full shadow rounded h-80 select-none">
             <div className="flex bg-white h-full min-h-full max-h-full">
               <Calendar locale="pt-BR" />
               <div className="flex-grow py-4 h-full min-h-full max-h-full overflow-hidden overflow-y-auto">
@@ -119,7 +123,71 @@ const User: React.FC = () => {
               <p className="mt-4">Tudo quieto por aqui...</p>
             </div>
           </div> */}
-          <div className="medical-record row-span-2 col-span-2 bg-white rounded shadow"></div>
+          <div className="medical-record row-span-2 col-span-2 bg-white rounded shadow">
+            <div className="flex flex-col p-6 h-full overflow-hidden w-full">
+              <div className="h-auto text-lg font-bold">
+                <h2>Ficha Médica</h2>
+              </div>
+              <div className="mt-8">
+                <div className="flex flex-col gap-8">
+                  <div className="flex flex-col gap-2">
+                    <div>
+                      <span className="font-bold">Peso: </span>{' '}
+                      {profile.currentWeight} kg
+                    </div>
+                    <div>
+                      <span className="font-bold">Altura:</span>{' '}
+                      {profile.currentHeight}m
+                    </div>
+                    <div>
+                      <span className="font-bold">Gordura corporal atual:</span>{' '}
+                      {(profile.currentBodyFat * 100).toFixed(2)}%
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <div>
+                      <span className="font-bold">Tipo sanguíneo:</span>{' '}
+                      {profile.bloodType}
+                    </div>
+                    <div>
+                      <span className="font-bold">
+                        Tipo de pele Fitzpatrick:
+                      </span>{' '}
+                      {profile.skinType}
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <div>
+                      <span className="font-bold">Doenças diagnosticadas:</span>{' '}
+                      {profile.medical.diagnosedDeseases.join(', ')}
+                    </div>
+                    <div>
+                      <span className="font-bold">
+                        Predisposições genéticas:
+                      </span>{' '}
+                      {profile.medical.geneticBias.join(', ')}
+                    </div>
+                    <div>
+                      <span className="font-bold">
+                        Condições psiquiátricas:
+                      </span>{' '}
+                      {profile.medical.psychiatricConditions.join(', ')}
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2 w-2/3">
+                    <div>
+                      <span className="font-bold">Exames antigos: </span>{' '}
+                      {exams.exams.map((t) => t.label).join(', ')}
+                    </div>
+                    <div>
+                      <span className="font-bold">Cirurgias:</span>{' '}
+                      {profile.medical.cirurgies}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="medications row-span-1 col-span-2 bg-white rounded shadow h-full overflow-hidden overflow-y-auto">
             <MedicationList medicines={medicines} />
           </div>

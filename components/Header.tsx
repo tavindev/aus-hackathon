@@ -7,7 +7,6 @@ export const Header: React.FC = () => {
       <div>logo</div>
       <div>
         <ul className="toolbar flex">
-          <li className="toolbar-link text-sm">Início</li>
           <li className="toolbar-link text-sm">O que é o AUS</li>
           <li className="toolbar-link text-sm">
             <Link href="/user">Área do usuário</Link>

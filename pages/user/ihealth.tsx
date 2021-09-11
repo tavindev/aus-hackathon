@@ -126,6 +126,7 @@ const IHealth: React.FC = () => {
                     <p>
                       Gordura Corporal Atual:{' '}
                       {(profile.currentBodyFat * 100)
+                        .toFixed(2)
                         .toString()
                         .replace('.', ',')}
                       %
