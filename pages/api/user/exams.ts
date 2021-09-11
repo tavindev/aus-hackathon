@@ -13,7 +13,7 @@ export interface ExamsResponse {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const exams: Exam[] = [
     {
-      label: 'Exame de Sangue',
+      label: 'Eletrocardiograma',
       date: new Date('2051-12-17T13:29:51'),
       status: 2,
     },
@@ -23,8 +23,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       status: 3,
     },
     {
-      label: 'Tumografia',
-      date: new Date('2032-07-09T10:10:45'),
+      label: 'Exame de Sequenciamento Genético',
+      date: new Date('2032-07-09T08:07:45'),
+      status: 3,
+    },
+    {
+      label: 'Ressonância Magnética',
+      date: new Date('2032-01-10T19:56:43'),
+      status: 3,
+    },
+    {
+      label: 'Raio X',
+      date: new Date('2032-09-25T10:07:45'),
       status: 3,
     },
   ];

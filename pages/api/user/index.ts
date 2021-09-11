@@ -8,21 +8,39 @@ export interface UserProfile {
   cep: string;
   currentHeight: number;
   currentBodyFat: number;
+  currentWeight: number;
   address: string;
   bloodType: string;
+  skinType: string;
+  medical: {
+    diagnosedDeseases: string[];
+    geneticBias: string[];
+    psychiatricConditions: string[];
+    alergies: string[];
+    cirurgies: string[];
+  };
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const profile: UserProfile = {
     name: 'Fulano da Silva',
-    age: 17,
+    age: 38,
     sex: 'Masculino',
     birthDate: new Date('2010-12-29'),
-    currentHeight: 1.72,
-    currentBodyFat: 0.134,
+    currentWeight: 79,
+    currentHeight: 1.74,
+    currentBodyFat: 0.145,
     address: 'Rua Senador Vergueiro, Flamengo',
     cep: '22230-001',
-    bloodType: 'A+',
+    bloodType: 'B-',
+    skinType: 'Negra',
+    medical: {
+      diagnosedDeseases: ['Diabete Tipo I'],
+      geneticBias: ['Arritimia Cardíaca', 'Hipotiroidismo'],
+      psychiatricConditions: ['Esquizofrenia'],
+      alergies: ['Rinite Alérgica', 'Abelha', 'Cloridrato de Amiodarona'],
+      cirurgies: ['Remoção de Amígdalas'],
+    },
   };
 
   res.status(200).json({ ...profile });

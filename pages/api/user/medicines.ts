@@ -10,9 +10,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const medicines: Medicines = {
     medicines: [
       {
-        name: 'Paracetamol',
-        description: 'Remédio para X (de 8 em 8 horas)',
-        next: '15:30',
+        name: 'Insulina',
+        description: 'Remédio para o controle de glicose na corrente sanguínea',
+        next: 'Após refeição',
       },
     ],
   };
