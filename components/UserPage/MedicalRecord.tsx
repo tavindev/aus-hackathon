@@ -19,7 +19,7 @@ export const MedicalRecord: React.FC = () => {
             <div className="h-auto text-lg font-bold">
                 <h2>Ficha Médica</h2>
             </div>
-            <div className="mt-8">
+            <div className="pl-4 mt-8">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2">
                         <div>

@@ -7,131 +7,146 @@
 @tailwind utilities;
 
 * {
-  font-family: 'Comfortaa', cursive;
+    font-family: "Comfortaa", cursive;
 
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 main {
-  color: white;
+    color: white;
 }
 
 .hero {
-  background: rgb(27, 78, 221);
-  background: linear-gradient(
-    340deg,
-    rgba(27, 78, 221, 1) 30%,
-    rgba(82, 152, 218, 1) 100%
-  );
+    background: rgb(27, 78, 221);
+    background: linear-gradient(
+        340deg,
+        rgba(27, 78, 221, 1) 30%,
+        rgba(82, 152, 218, 1) 100%
+    );
 
-  height: 80vh;
+    height: 80vh;
 }
 
 .about {
-  background: rgb(27, 78, 221);
+    background: rgb(27, 78, 221);
 
-  height: 40vh;
+    height: 40vh;
 }
 
 .aus-wrapper {
-  color: white;
-  fill: white;
+    color: white;
+    fill: white;
 }
 
 .card-text > p {
-  color: black;
+    color: black;
 }
 
 .cards-section {
-  min-height: 40vh;
+    min-height: 40vh;
 }
 
 .cards-section-grid {
-  min-height: 40vh;
+    min-height: 40vh;
 }
 
 .card-item {
-  color: black;
+    color: black;
 }
 
 .card-item-img div img {
-  color: rgba(27, 78, 221, 1);
-  fill: rgba(27, 78, 221, 1);
+    color: rgba(27, 78, 221, 1);
+    fill: rgba(27, 78, 221, 1);
 }
 
 .toolbar-link {
-  display: inline-block;
-  margin-left: 36px;
-  font-weight: 700;
-  color: white;
-  cursor: pointer;
-  text-transform: uppercase;
+    display: inline-block;
+    margin-left: 36px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 .toolbar-link:after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: white;
-  transition: width 0.3s;
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
 }
 
 .toolbar-link:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .user-layout {
-  color: black;
+    color: black;
 }
 
 .grid-container {
-  height: 1223px;
+    height: 1223px;
 }
 
 /* Loader */
 .loader,
 .loader:after {
-  border-radius: 50%;
-  width: 10em;
-  height: 10em;
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
 }
 .loader {
-  margin: 60px auto;
-  font-size: 10px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-left: 1.1em solid rgba(37, 99, 235);
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: load8 1.1s infinite linear;
-  animation: load8 1.1s infinite linear;
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid rgba(37, 99, 235);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
 }
 @-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 @keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 .container {
-  padding: 0 50px;
+    padding: 0 50px;
+}
+
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }

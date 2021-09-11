@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { YoutubeEmbed } from "components/UserPage/YoutubeEmbed";
 
 const MHealth: React.FC = () => {
     return (
@@ -13,7 +14,7 @@ const MHealth: React.FC = () => {
                     <h1 className="text-2xl">Saúde Mental</h1>
                 </div>
                 <div className="flex flex-grow justify-center rounded-xl shadow bg-white mt-12 p-8">
-                    <div className="flex flex-grow flex-col items-center max-w-xl text-center">
+                    <div className="flex flex-grow flex-col items-center max-w-4xl text-justify">
                         <div className="relative w-48 h-36">
                             <Image src="/brain_aus.png" layout="fill" />
                         </div>
@@ -21,13 +22,13 @@ const MHealth: React.FC = () => {
                             <h2>Como você está?</h2>
                             <h2>Como está sua saúde mental?</h2>
                         </div>
-                        <div className="mt-4">
+                        <div className="mt-8">
                             A maior parte das pessoas, quando ouve falar em
                             “Saúde Mental”, pensa em “Doença Mental”. Mas, a
                             saúde mental implica muito mais que a ausência de
                             doenças mentais.
                         </div>
-                        <div className="mt-4">
+                        <div className="mt-8">
                             Pessoas mentalmente saudáveis compreendem que
                             ninguém é perfeito, que todos possuem limites e que
                             não se pode ser tudo para todos. Elas vivenciam
@@ -39,15 +40,15 @@ const MHealth: React.FC = () => {
                             perturbações, traumas ou transições importantes nos
                             diferentes ciclos da vida.
                         </div>
-                        <div className="mt-4">
+                        <div className="mt-8">
                             A Saúde Mental de uma pessoa está relacionada à
                             forma como ela reage às exigências da vida e ao modo
                             como harmoniza seus desejos, capacidades, ambições,
                             ideias e emoções.
                         </div>
-                        <div className="mt-4">
+                        <div className="mt-8">
                             Ter saúde mental é:
-                            <ul className="list-disc mt-4">
+                            <ul className="mt-4">
                                 <li>Estar bem consigo mesmo e com os outros</li>
                                 <li>Aceitar as exigências da vida</li>
                                 <li>
@@ -60,6 +61,15 @@ const MHealth: React.FC = () => {
                                     quando necessário
                                 </li>
                             </ul>
+                        </div>
+                        <YoutubeEmbed embedId="C-UXvNq7-PI" />
+                        <div className="mt-8 text-lg">Como obter ajuda?</div>
+                        <div className="mt-4">
+                            Você pode acessar o nosso doutor virtual e agendar
+                            uma visita
+                        </div>
+                        <div className="text-sm font-bold mt-12">
+                            Fonte: Secretaría de Saúde do Paraná
                         </div>
                     </div>
                 </div>
