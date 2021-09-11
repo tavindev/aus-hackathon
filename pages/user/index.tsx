@@ -19,6 +19,10 @@ import { fetchMedicines } from "utils/fetchMedicines";
 import { ExamsResponse } from "pages/api/user/exams";
 import { fetchExams } from "utils/fetchExams";
 import { MedicalRecord } from "components/UserPage/MedicalRecord";
+import { ServiceCard } from "components/UserPage/ServiceCard";
+
+import { FaHospitalAlt, FaHospital, FaBaby } from "react-icons/fa";
+import { BiHealth } from "react-icons/bi";
 
 const fetchEvents = async () => {
     const response = await fetch("/api/user/events");
@@ -145,7 +149,28 @@ const User: React.FC = () => {
                     <div className="medications row-span-1 col-span-2 bg-white rounded shadow h-full overflow-hidden overflow-y-auto">
                         <MedicationList medicines={medicines} />
                     </div>
-                    <div className="services row-span-1 col-span-2 bg-white rounded shadow"></div>
+                    <div className="services flex flex-col row-span-1 col-span-2 bg-white rounded shadow">
+                        <div className="pl-4 pt-4 h-12 overflow-hidden">
+                            <h2 className="text-xl font-bold">Serviços</h2>
+                        </div>
+                        <div className="flex flex-grow items-center">
+                            <div className="flex overflow-hidden overflow-x-auto">
+                                <ServiceCard
+                                    name="Hospital"
+                                    Icon={FaHospitalAlt}
+                                />
+                                <ServiceCard
+                                    name="Posto de Saúde"
+                                    Icon={FaHospital}
+                                />
+                                <ServiceCard
+                                    name="Emergência"
+                                    Icon={BiHealth}
+                                />
+                                <ServiceCard name="Maternidade" Icon={FaBaby} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
