@@ -17,7 +17,7 @@ Com o objetivo de criar uma aplicação de ponta e altamente escalável, o aplic
 - [TailwindCSS](https://tailwindcss.com/)
   - O TailwindCSS é um framework de classes de utilidade CSS. Com ele, podemos estilizar nossa aplicação de forma simples, porém altamente customizavel. 
 - Azure Health Bot
-  - O Azure Health Bot é uma IA de NLP (Natural Language Processing) que nos permite realizar uma comunicação com humano e máquina. O AUS utiliza essa ferramenta para o Assistente Virtual.
+  - O Azure Health Bot é uma IA de NLP (Natural Language Processing) que nos permite realizar uma comunicação com humano e máquina. O AUS utiliza essa ferramenta para a Assistente Virtual.
 
 <div align="center">
   <img style="width: 200px; height: 200px" src="https://raw.githubusercontent.com/igniteram/Cliptor.js/HEAD/images/typescript.png" />
@@ -37,7 +37,7 @@ Algumas possíveis soluções para a implementação de um banco de dados:
 ## Funcionalidades
 
 ### Assistente Virtual
-O Assistente Virtual é uma ferramenta que permite o usuário realizar consultas quando e onde quiser, seja pelo nosso aplicativo ou pelo Telegram, e receber um breve diagnóstico e ações recomendadas para tratar o problema.
+A Assistente Virtual é uma ferramenta que permite o usuário realizar consultas quando e onde quiser, seja pelo nosso aplicativo ou pelo Telegram, e receber um breve diagnóstico e ações recomendadas para tratar o problema.
 
 ### Ficha Médica
   - Condições médicas
