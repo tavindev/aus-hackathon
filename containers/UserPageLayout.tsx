@@ -23,11 +23,7 @@ export const UserPageLayout: React.FC = ({ children }) => {
                     </div>
                 </div>
                 <nav className="flex flex-col w-full text-black">
-                    <NavLink
-                        Icon={FcAssistant}
-                        label="Assitente Virtual"
-                        to="/user"
-                    />
+                    <NavLink Icon={FcAssistant} label="SUSana" to="/user" />
                     <NavLink
                         Icon={MdDashboard}
                         label="Painel"

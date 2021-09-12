@@ -62,14 +62,48 @@ const MHealth: React.FC = () => {
                                 </li>
                             </ul>
                         </div>
+                        <div className="text-sm font-bold mt-4">
+                            Fonte: Secretaria de Saúde do Paraná
+                        </div>
+                        <div className="mt-12 text-lg">
+                            Por que eu deveria me preocupar?
+                        </div>
                         <YoutubeEmbed embedId="C-UXvNq7-PI" />
+                        <div className="text-sm font-bold mt-4">
+                            Fonte: Hospital Albert Einstein
+                        </div>
                         <div className="mt-8 text-lg">Como obter ajuda?</div>
                         <div className="mt-4">
-                            Você pode acessar o nosso doutor virtual e agendar
-                            uma visita
+                            A atenção em saúde mental é oferecida no Sistema
+                            Único de Saúde (SUS), através de financiamento
+                            tripartite e de ações municipalizadas e organizadas
+                            por níveis de complexidade. A Rede de Cuidados em
+                            Saúde Mental, Crack, Álcool e outras Drogas foi
+                            pactuada em julho de 2011, como parte das discussões
+                            de implantação do Decreto nº 7508, de 28 de junho de
+                            2011, e prevê, a partir da Política Nacional de
+                            Saúde Mental, os Centros de Atenção Psicossocial
+                            (CAPs), os Serviços Residenciais Terapêuticos, os
+                            Centros de Convivência e Cultura, as Unidades de
+                            Acolhimento e os leitos de atenção integral em
+                            Hospitais Gerais.
                         </div>
-                        <div className="text-sm font-bold mt-12">
-                            Fonte: Secretaría de Saúde do Paraná
+                        <div className="mt-4">
+                            Além de atender pessoas com transtornos mentais,
+                            estes espaços acolhem usuários de álcool, crack e
+                            outras drogas e estão espalhados pelo país,
+                            modificando a estrutura da assistência à saúde
+                            mental. E vêm substituindo progressivamente o modelo
+                            hospitalocêntrico e manicomial, de características
+                            excludentes, opressivas e reducionistas (leia mais
+                            no artigo Desafios da reforma psiquiátrica no
+                            Brasil, de Benilton Bezarra Jr.), na tentativa de
+                            construir um sistema de assistência orientado pelos
+                            princípios fundamentais do SUS (universalidade,
+                            equidade e integralidade).
+                        </div>
+                        <div className="text-sm font-bold mt-4">
+                            Fonte: Fiocruz
                         </div>
                     </div>
                 </div>
