@@ -11,7 +11,7 @@ Com o objetivo de criar uma aplicação de ponta e altamente escalável, o aplic
 - [Typescript](https://www.typescriptlang.org/)
   - O Typescript é um "Superset" do Javascript (ou como dizem: Javascript em esteróides). Com ele, podemos criar aplicações altamente tipaveis e robustas, melhorando, assim, a experiência de desenvolvimento e a manutenção do código 
 - [NextJS](https://nextjs.org/) 
-  - O NextJs nos permite criar aplicações utilizando a tecnologia de "Server-Side Rendering" e hospedar "Serverless Functions" em servidores da [AWS](https://aws.amazon.com/pt/) de alta performace. Dessa forma, podemos entregar aos nossos usuários a melhor experiência possível. 
+  - O NextJs é um framework de produção para ReactJS nos permite criar aplicações utilizando a tecnologia de "Server-Side Rendering" e hospedar "Serverless Functions" em servidores da [AWS](https://aws.amazon.com/pt/) de alta performace. Dessa forma, podemos entregar aos nossos usuários a melhor experiência possível. 
 - [ReactJS](https://pt-br.reactjs.org/)
   - O ReactJs é um framework de desenvolvimento web que nos permite criar aplicações performáticas e de forma declarativa.
 - [TailwindCSS](https://tailwindcss.com/)
@@ -34,12 +34,10 @@ Algumas possíveis soluções para a implementação de um banco de dados:
 - [Prisma.io](https://www.prisma.io/) (TypeORM para SQL e NoSQL)
 - [MongoDB](https://www.mongodb.com/) (Solução Cloud com bibliotecas em JS)
 
-2 - Por questões de tempo, não desenvolvemos nossa aplicação com a metodologia de "mobile-first". Porém futuras atualizações tornarão o aplicativo AUS "mobile friendly"
-
 ## Funcionalidades
 
 ### Assistente Virtual
-O Assistente Virtual é uma ferramenta que permite o usuário realizar consultas quando e onde quiser, seja pelo nosso aplicativo ou pelo Telegram...
+O Assistente Virtual é uma ferramenta que permite o usuário realizar consultas quando e onde quiser, seja pelo nosso aplicativo ou pelo Telegram, e receber um breve diagnóstico e ações recomendadas para tratar o problema.
 
 ### Ficha Médica
   - Condições médicas
