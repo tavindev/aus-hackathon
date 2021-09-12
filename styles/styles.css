@@ -150,3 +150,9 @@ main {
     width: 100%;
     position: absolute;
 }
+
+.sidebar {
+    min-width: 15rem;
+    max-width: 15rem;
+    width: 15rem;
+}

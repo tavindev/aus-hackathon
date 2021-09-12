@@ -18,7 +18,7 @@ export const PreventiveMedicine: React.FC = () => {
                     predisposição à arritimia cardíaca:
                 </div>
                 <div className="pl-2">
-                    <div className="mt-4 max-w-4xl">
+                    <div className="text-lg mt-4 max-w-4xl">
                         O que são Arritmias Cardíacas?
                     </div>
                     <div className="pl-2">
@@ -35,7 +35,7 @@ export const PreventiveMedicine: React.FC = () => {
                     </div>
                 </div>
                 <div className="pl-2">
-                    <div className="mt-4 max-w-4xl">Riscos</div>
+                    <div className="text-lg mt-4 max-w-4xl">Riscos</div>
                     <div className="pl-2">
                         <div className="mt-4 max-w-4xl">
                             Alguns sintomas são palpitações ou “batedeiras”,
@@ -56,7 +56,7 @@ export const PreventiveMedicine: React.FC = () => {
                 </div>
 
                 <div className="pl-2">
-                    <div className="mt-4 max-w-4xl">Como previnir?</div>
+                    <div className="text-lg mt-4 max-w-4xl">Como previnir?</div>
                     <div className="pl-2">
                         <div className="mt-4 max-w-4xl">
                             <div>
