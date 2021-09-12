@@ -34,6 +34,11 @@ export const UserPageLayout: React.FC = ({ children }) => {
                         to="/user/dashboard"
                     />
                     <NavLink
+                        Icon={RiMentalHealthFill}
+                        label="Saúde Mental"
+                        to="/user/mhealth"
+                    />
+                    <NavLink
                         Icon={GiHealthNormal}
                         label="Saúde Interativa"
                         to="/user/ihealth"
@@ -42,11 +47,6 @@ export const UserPageLayout: React.FC = ({ children }) => {
                         Icon={HiDocumentReport}
                         label="Histórico Clínico"
                         to="/user/records"
-                    />
-                    <NavLink
-                        Icon={RiMentalHealthFill}
-                        label="Saúde Mental"
-                        to="/user/mhealth"
                     />
                     <NavLink
                         Icon={BiDevices}

@@ -41,21 +41,24 @@ const User: React.FC = () => {
                 ></iframe>
             </div>
             <div className="h-full w-1/2 p-8">
-                <div className="text-2xl font-bold">
-                    Assistente Virtual do AUS
+                <div className="text-4xl font-bold text-blue-800 mt-10">
+                    Seja bem-vindo ao Assistente Virtual do AUS
                 </div>
-                <div className="px-2 pt-8 max-w-2xl text-justify">
-                    <div className="">
+                <div className="px-8 pt-10 max-w-3xl text-justify">
+                    <div className="text-2xl">O que é?</div>
+                    <div className="pl-6 mt-8">
                         O Assistente Virtual do AUS lhe permite fazer uma breve
                         consulta diretamente do seu computador ou celular
                         (Telegram).
                     </div>
-                    <div className="mt-8">
+                    <div className="text-2xl mt-8">Qual é o objetivo?</div>
+                    <div className="pl-6 mt-8">
                         Com o atendimento virtual, você obtém um rápido
                         diagnóstico e uma recomendação precisa de como tratar o
                         seu problema
                     </div>
-                    <div className="mt-8">
+                    <div className="text-2xl mt-8">Como usar</div>
+                    <div className="pl-6 mt-8">
                         Para começar, digite seus sintomas na barra de mensagem,
                         localizada na parte inferior da caixa de dialogo à
                         esquerda
