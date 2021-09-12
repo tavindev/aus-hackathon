@@ -52,9 +52,9 @@ const User: React.FC = () => {
                     <div className="px-8 pt-10 max-w-3xl text-justify">
                         <div className="text-2xl">O que é?</div>
                         <div className="pl-6 mt-8">
-                            SUS é a Assistente Virtual do AUS lhe permite fazer
-                            uma breve consulta diretamente do seu computador ou
-                            celular (Telegram).
+                            SUSana é a Assistente Virtual do AUS lhe permite
+                            fazer uma breve consulta diretamente do seu
+                            computador ou celular (Telegram).
                         </div>
                         <div className="text-2xl mt-8">Qual é o objetivo?</div>
                         <div className="pl-6 mt-8">
