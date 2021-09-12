@@ -8,7 +8,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ executeScroll }) => {
     return (
         <div className="flex justify-between items-center h-16 pt-8">
-            <div>logo</div>
+            <div />
             <div>
                 <ul className="toolbar flex">
                     <li
