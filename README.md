@@ -39,7 +39,7 @@ Algumas possíveis soluções para a implementação de um banco de dados:
 ### Assistente Virtual
 A Assistente Virtual, SUSana, é uma ferramenta que permite o usuário realizar consultas quando e onde quiser, seja pelo nosso aplicativo ou pelo Telegram, e receber um breve diagnóstico e ações recomendadas para tratar o problema.
 
-Link do Telegram: t.me/AUS_SUSana_bot
+Link do Telegram: https://t.me/AUS_SUSana_bot
 
 ### Ficha Médica
   - Condições médicas
