@@ -37,7 +37,7 @@ Algumas possíveis soluções para a implementação de um banco de dados:
 ## Funcionalidades
 
 ### Assistente Virtual
-A Assistente Virtual é uma ferramenta que permite o usuário realizar consultas quando e onde quiser, seja pelo nosso aplicativo ou pelo Telegram, e receber um breve diagnóstico e ações recomendadas para tratar o problema.
+A Assistente Virtual, SUSana, é uma ferramenta que permite o usuário realizar consultas quando e onde quiser, seja pelo nosso aplicativo ou pelo Telegram, e receber um breve diagnóstico e ações recomendadas para tratar o problema.
 
 ### Ficha Médica
   - Condições médicas
