@@ -10,7 +10,7 @@ const User: React.FC = () => {
                 const response = JSON.parse(xhr.responseText);
 
                 setChatSrc(
-                    "https://webchat.botframework.com/embed/doutor-virtual-aus-y4olfff?t=" +
+                    "https://webchat.botframework.com/embed/doutor-virtual-aus-y4olfff?locale=pt-br&t=" +
                         response
                 );
             }
